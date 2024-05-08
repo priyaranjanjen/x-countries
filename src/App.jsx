@@ -3,12 +3,14 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+import Flags from "./flags"
+
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <p>hello</p>
+      <Flags/>
     </>
   )
 }
