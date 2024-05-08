@@ -34,7 +34,7 @@ export default function Flags(){
 
                     <div className="flags" key={index}> 
                         <img src={country.flags.png} alt={country.flags.alt}></img>
-                        <p>{country.region}</p>
+                        <p>{country.name.common}</p>
                     </div>
 
                 ))
