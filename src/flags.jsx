@@ -5,6 +5,7 @@ import './flags.css';
 
 export default function Flags(){
     const [countries, setCountries] = useState([]);
+    const [searchedState, setSearchedState] = useState("");
     const url = "https://restcountries.com/v3.1/all";
 
     const fetchCountries = async(url) => {
@@ -26,20 +27,35 @@ export default function Flags(){
     }, [])
 
     return (
-        <>
+        <div className="countries">
             <h1> COUNTRIES FLAGS</h1>
 
-            <div className="container">
-                { countries && countries.map((country, index) => (
+            <input 
+                type="text" 
+                name="search" 
+                placeholder="Search for countries..."
+                value={searchedState}
+                className="search"
+                onChange={(e) => {
+                    console.log(e.target.value)
+                    setSearchedState(e.target.value);
+                }}
+            />
 
+            <div className="countryCard">
+                {countries.filter((country) => {
+                    if (!searchedState) {
+                        return true; // Show all countries if search is empty
+                    }
+                    return country.name.common.toLowerCase().includes(searchedState.toLowerCase());
+                }).map((country, index) => (
                     <div className="flags" key={index}> 
                         <img src={country.flags.png} alt={country.flags.alt}></img>
-                        <p>{country.name.common}</p>
+                        <span>{country.name.common}</span>
                     </div>
-
-                ))
-                }
+                ))}
             </div>
-        </>
+
+        </div>
     )
 }

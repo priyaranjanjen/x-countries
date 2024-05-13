@@ -1,4 +1,17 @@
-.container{
+.countries{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.search{
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.countryCard{
     height: 100vh;
     display: flex;
     justify-content: center;
