@@ -54,9 +54,9 @@ export default function Flags(){
                         <span>{country.name.common}</span>
                     </div>
                 ))}
-                {searchedState && countries.filter((country) => country.name.common.toLowerCase().includes(searchedState.toLowerCase())).length === 0 && (
+                {/* {searchedState && countries.filter((country) => country.name.common.toLowerCase().includes(searchedState.toLowerCase())).length === 0 && (
                     <div>No matching countries found.</div>
-                )}
+                )} */}
             </div>
 
         </div>
