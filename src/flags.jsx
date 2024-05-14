@@ -42,14 +42,14 @@ export default function Flags(){
                 }}
             />
 
-            <div className="countryCard">
+            <div className="card">
                 {countries.filter((country) => {
                     if (!searchedState) {
                         return true; // Show all countries if search is empty
                     }
                     return country.name.common.toLowerCase().includes(searchedState.toLowerCase());
                 }).map((country, index) => (
-                    <div className="flags" key={index}> 
+                    <div className="countryCard" key={index}> 
                         <img src={country.flags.png} alt={country.flags.alt}></img>
                         <span>{country.name.common}</span>
                     </div>

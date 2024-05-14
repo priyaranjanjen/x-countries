@@ -11,7 +11,7 @@
     width: 400px;
 }
 
-.countryCard{
+.card{
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@
 
 }
 
-.flags{
+.countryCard{
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
     padding: 10px;
 }
 
-.flags img{
+.countryCard img{
     height: 80px;
     width: 150px;
 }
